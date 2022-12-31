@@ -30,13 +30,13 @@ feel free to get in touch, especially if you're local!
   <input type="text" id="name" name="name" required>
 
   <br>
-  <label for="email"><p> &nbsp Email </p></label>
+  <label for="email"><p>Email </p></label>
   <input type="email" id="email" name="email" required>
   
-  <br><br>
+  <br>
   <label for="message">Message</label>
   <br>
-  <textarea name="message"></textarea>
+  <textarea name="message" columns=50 rows=3></textarea>
 
   <br>
   <button type="submit">Send message</button>
