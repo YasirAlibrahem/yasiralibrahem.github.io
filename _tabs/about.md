@@ -24,15 +24,19 @@ Personally, my interest revolve around:
 - environmental endeavors, spirituality, yoga, and climbing
 feel free to get in touch, especially if you're local! 
 
+[//]: # (form created using FormSpree https://formspree.io/)
 <form accept-charset="UTF-8" action="https://formspree.io/f/xlekeebb" method="POST">
-  <label for="name">Name</label>
+  <label for="name">Name </label>
   <input type="text" id="name" name="name" required>
 
-  <label for="email">Email</label>
+  <br>
+  <label for="email">Email </label>
   <input type="email" id="email" name="email" required>
-
+  
+  <br>
   <label for="message">Message</label>
   <textarea name="message"></textarea>
 
+  <br>
   <button type="submit">Send message</button>
 </form>
