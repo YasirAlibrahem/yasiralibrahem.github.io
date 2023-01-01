@@ -25,12 +25,13 @@ Personally, my interest revolve around:
 feel free to get in touch, especially if you're local! 
 
 [//]: # (form created using FormSpree https://formspree.io/)
+<br><br>
 <form accept-charset="UTF-8" action="https://formspree.io/f/xlekeebb" method="POST" display=block>
   <label for="name">Name </label>
   <input type="text" id="name" name="name" required>
 
   <br>
-  <label for="email"><p>Email </p></label>
+  <label for="email">Email</label>
   <input type="email" id="email" name="email" required>
   
   <br>
