@@ -36,7 +36,7 @@ feel free to get in touch, especially if you're local!
   <br>
   <label for="message">Message</label>
   <br>
-  <textarea name="message" cols=200 rows=3></textarea>
+  <textarea name="message" cols=100 rows=3></textarea>
 
   <br>
   <button type="submit">Send message</button>
