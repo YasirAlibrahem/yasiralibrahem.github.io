@@ -11,8 +11,9 @@
   icon: 'fas fa-envelope'
   noblank: true            # open link in current tab
 - 
-  type: instagram
+  type: instagram    # i added this to the theme myself
   icon: 'fab fa-instagram'
+  url: 'https://www.intagram.com/potatoe.diet'
   noblank: true
 -
   type: rss
