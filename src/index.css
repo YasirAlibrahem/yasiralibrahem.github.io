@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --background-color-dark: #0d1117;
+  --text-color-dark: #c9d1d9;
 }
 
 code {
@@ -12,3 +16,14 @@ code {
     monospace;
 }
 
+
+/* Use CSS variables for background and text colors to support dark mode */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+[data-color-mode='dark'] {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+}

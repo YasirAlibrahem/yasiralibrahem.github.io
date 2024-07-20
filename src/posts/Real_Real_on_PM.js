@@ -3,12 +3,12 @@ import { marked } from 'marked'
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const ThoughtsOnSalesEngineering = () => {
+const RealRealonPM = () => {
 const [post, setPost] = useState([]);
 const location = useLocation();
 
 useEffect(() => {
-    fetch('2021-08-21.md')
+    fetch('2024-07-20.md')
     .then(response => response.text())
     .then(text => {
         const parsedMarkdown = frontMatter(text);
@@ -22,9 +22,10 @@ useEffect(() => {
 
   return (
     <div>
-        <Link to={`/posts/ThoughtsOnSalesEngineering`}>
-          <img src={process.env.PUBLIC_URL + '/cover-san-francisco.png'} alt="Post Cover" style={{borderRadius: '5%', width: '100%', height: '50%'}} />
+        <Link to={`/posts/RealRealonPM`}>
+          <img src={process.env.PUBLIC_URL + '/team.png'} alt="Post Cover" style={{borderRadius: '5%', width: '100%', height: '50%'}} />
         </Link>
+        <br />
         <h2 style={{ textAlign: 'center' }}>{post.title}</h2>
         <p style={{ textAlign: 'left' }}>{post.date}</p>
         {location.pathname === '/' && <div>
@@ -36,6 +37,4 @@ useEffect(() => {
   )
 }
 
-export default ThoughtsOnSalesEngineering;
-
-// import post1 from './2021-08-21.md';
+export default RealRealonPM;

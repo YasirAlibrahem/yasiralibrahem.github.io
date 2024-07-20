@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@primer/octicons-react": "^19.9.0",
     "@primer/react": "^36.5.0",
     "@primer/styled-octicons": "^19.8.0",
     "@testing-library/jest-dom": "^5.17.0",
