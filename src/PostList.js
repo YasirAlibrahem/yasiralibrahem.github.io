@@ -1,38 +1,26 @@
+import { Link } from 'react-router-dom';
+import posts from './postsManifest';
 import './App.css';
-import FundamentalConceptsInGenAI from './posts/Fundamental_Concepts_in_GenAI'
-import HowToAvoidAClimateDisaster from './posts/How_to_Avoid_a_Climate_Disaster';
-import ThoughtsOnSalesEngineering from './posts/Thoughts_on_Sales_Engineering';
-import DeveloperProductivity101 from './posts/Developer_Productivity_101';
-import RealRealonPM from './posts/Real_Real_on_PM';
-import OnLeadershipAndManagement from './posts/On_Leadership_And_Management';
-import MentalModelsToCultiavte from './posts/Mental_Models_To_Cultiavte';
 
 const PostList = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <MentalModelsToCultiavte />
-      </div>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <OnLeadershipAndManagement />
-      </div>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <RealRealonPM />
-      </div>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <DeveloperProductivity101 />
-      </div>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <FundamentalConceptsInGenAI />
-      </div>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <HowToAvoidAClimateDisaster />
-      </div>
-      <div style={{ flex: '0 0 47%', marginBottom: '3%' }}>
-        <ThoughtsOnSalesEngineering />
-      </div>
+      {posts.map((p) => (
+        <div key={p.slug} style={{ flex: '0 0 47%', marginBottom: '3%' }}>
+          <Link to={`/posts/${p.slug}`}>
+            <img
+              src={`${process.env.PUBLIC_URL}/${p.cover}`}
+              alt="Post Cover"
+              style={{ borderRadius: '5%', width: '100%' }}
+            />
+          </Link>
+          <h2 style={{ textAlign: 'center' }}>{p.title}</h2>
+          <p style={{ textAlign: 'left' }}>{p.date}</p>
+          <p style={{ textAlign: 'left' }}>{p.excerpt}</p>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export default PostList;

@@ -1,11 +1,15 @@
 import './App.css';
 import {ThemeProvider, BaseStyles,PageLayout, Button, Link } from '@primer/react';
 import BlogPosts from './BlogPosts';
+import posts from './postsManifest';
 import { useState } from 'react';
+import { useLocation, Link as RouterLink } from 'react-router-dom';
 import { MarkGithubIcon, MailIcon } from '@primer/octicons-react';
 
 function App() {
   const [colorMode, setColorMode] = useState('light');
+  const location = useLocation();
+  const isPostPage = location.pathname.startsWith('/posts/');
 
   return (
     <ThemeProvider colorMode={colorMode} preventSSRMismatch>
@@ -49,6 +53,21 @@ function App() {
                       />
                     </Link>
                   </div>
+                  {isPostPage && (
+                    <>
+                      <hr style={{ margin: '20px 0', border: 'none', borderTop: '1px solid currentColor', opacity: 0.3 }} />
+                      <h3 style={{ marginBottom: '8px', textAlign: 'left' }}>All Posts</h3>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
+                        {posts.map((p) => (
+                          <li key={p.slug} style={{ marginBottom: '6px' }}>
+                            <RouterLink to={`/posts/${p.slug}`} style={{ fontSize: '14px' }}>
+                              {p.title}
+                            </RouterLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </div>
               </div>
             </PageLayout.Pane>
