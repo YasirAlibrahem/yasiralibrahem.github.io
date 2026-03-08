@@ -19,6 +19,63 @@
   flex-shrink: 0; /* This will prevent the footer from shrinking */
 }
 
+.SidebarPane {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 20px 0;
+}
+
+.SidebarToolbar {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.SidebarContent {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.SidebarContent h1,
+.SidebarContent p,
+.SidebarContent .SocialLinks {
+  width: 100%;
+}
+
+.ThemeToggle {
+  position: static;
+}
+
+.ProfileImage {
+  display: block;
+  margin: 6px auto 0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.SocialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.SocialIcon {
+  display: block;
+}
+
 .BlogPosts {
   display: flex;
   text-align: justify;
