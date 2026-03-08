@@ -21,7 +21,6 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.1",
     "react-scripts": "5.0.1",
-    "style-components": "^0.1.0",
     "web-vitals": "^5.1.0"
   },
   "scripts": {
@@ -53,6 +52,27 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
+  "overrides": {
+    "underscore": ">=1.13.8",
+    "serialize-javascript": ">=6.0.2",
+    "@tootallnate/once": ">=3.0.1",
+    "resolve-url-loader": {
+      "postcss": "8.4.49"
+    },
+    "svgo": {
+      "css-select": {
+        "nth-check": ">=2.0.1"
+      }
+    }
+  },
+  "//overrides": [
+    "All overrides are for TRANSITIVE dependencies with known Dependabot vulnerabilities, pulled in by react-scripts@5.0.1 (unmaintained CRA). None are direct deps. Remove this section if/when react-scripts is replaced (e.g. with Vite).",
+    "underscore >=1.13.8 — GHSA-qpx9-hpmf-5gmw: DoS via unlimited recursion. Chain: react-scripts > bfj > jsonpath > underscore",
+    "serialize-javascript >=6.0.2 — GHSA-5c6j-r48x-rmvq: RCE via RegExp.flags. Chain: react-scripts > css-minimizer-webpack-plugin & workbox-build > rollup-plugin-terser",
+    "@tootallnate/once >=3.0.1 — GHSA-vpq2-c234-7xj6: Incorrect control flow scoping. Chain: react-scripts > jest > jsdom > http-proxy-agent",
+    "resolve-url-loader > postcss 8.4.49 — GHSA-7fh5-64p2-3v2j: PostCSS line return parsing error. Chain: react-scripts > resolve-url-loader > postcss@7 (forced to v8)",
+    "svgo > css-select > nth-check >=2.0.1 — GHSA-rp65-9cf3-cjxr: ReDoS in nth-check. Chain: react-scripts > @svgr/webpack > svgo@1 > css-select > nth-check@1"
+  ],
   "jest": {
     "transformIgnorePatterns": [
       "node_modules/(?!(react-markdown|remark-.*|unified|bail|is-plain-obj|trough|vfile.*|unist-.*|mdast-.*|micromark.*|decode-named-character-reference|character-entities|trim-lines|property-information|hast-.*|space-separated-tokens|comma-separated-tokens|devlop|ccount|escape-string-regexp|zwitch|longest-streak|web-namespaces|stringify-entities|character-entities-html4|html-void-elements)/)"
