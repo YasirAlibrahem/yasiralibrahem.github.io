@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import PostList from './PostList';
+import { MemoryRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders post list with blog posts', () => {
+  render(
+    <MemoryRouter>
+      <PostList />
+    </MemoryRouter>
+  );
+  const heading = screen.getByText(/Mental Models/i);
+  expect(heading).toBeInTheDocument();
 });

@@ -2,7 +2,8 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: var(--background-color);
+  background-color: var(--bgColor-default);
+  color: var(--fgColor-default);
 }
 
 .PageLayout {
@@ -87,15 +88,4 @@
   margin-right: '3%'  
 }
 
-/* Adjust styles to use CSS variables for colors */
-:root {
-  --background-color: #ffffff; /* Light mode background color */
-  --text-color: #000000; /* Light mode text color */
-  --background-color-dark: #0d1117; /* Dark mode background color */
-  --text-color-dark: #c9d1d9; /* Dark mode text color */
-}
 
-[data-color-mode='dark'] {
-  --background-color: var(--background-color-dark);
-  --text-color: var(--text-color-dark);
-}
